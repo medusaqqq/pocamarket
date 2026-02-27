@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Pocamarket</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+<div class="container">
+    <img id="logo" src="img/logo.png" alt="">
+    <h2 id="title">࿔˚‧ Meducalculadora ଳ ⋆˚࿔</h2>
+    <h3>Pocamarket!</h3>
+
+    <label>Monto en USD:</label>
+    <input type="number" id="montousd" placeholder="Ej: 17.30">
+
+    <button class="calcular-button" onclick="calcular()">Calcular</button>
+
+    <h3 id="resultado">Precio del link: $0</h3>
+    <p id="mensaje"></p>
+
+    <script>
+        function calcular() {
+            let monto = parseFloat(document.getElementById("montousd").value);
+            let usd = 1500
+
+            let total = monto * usd
+            let mensaje = "A este precio solo se le suma el costo de envio (entre 1600 y 1950) ya que pocamarket no paga impuestos! :3"
+            document.getElementById("resultado").textContent = "Resultado:" + total.toFixed(2);
+            document.getElementById("resultado").innerText = "Precio de la pc: $" + total.toFixed(2);
+            document.getElementById("mensaje").textContent = mensaje;
+            document.getElementById("mensaje").innerText = mensaje;
+}
+
+    </script>
+
+<div>
+        <button class="carrd" onclick="window.open('https://medubox.carrd.co/', '_blank')">࿔˚‧ Carrd ଳ ⋆˚࿔</button>
+</div>
+
+</body>
